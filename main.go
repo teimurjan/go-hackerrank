@@ -26,6 +26,8 @@ func main() {
 			warmup.RunSimpleArraySum()
 		case "staircase":
 			warmup.RunStaircase()
+		case "timeConversion":
+			warmup.RunTimeConversion()
 		default:
 			fmt.Println("Invalid program name.")
 		}
