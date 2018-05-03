@@ -1,4 +1,4 @@
-package warmup
+package utils
 
 import (
 	"bufio"
@@ -8,10 +8,10 @@ import (
 	"strings"
 )
 
-func printResult(result string, debug bool) {
+func PrintResult(result string, debug bool) {
 	if !debug {
 		outputFile, err := os.Create(os.Getenv("OUTPUT_PATH"))
-		checkError(err)
+		CheckError(err)
 		defer outputFile.Close()
 		writer := bufio.NewWriterSize(outputFile, 1024*1024)
 		fmt.Fprint(writer, result)
@@ -22,7 +22,7 @@ func printResult(result string, debug bool) {
 	}
 }
 
-func readLine(reader *bufio.Reader) string {
+func ReadLine(reader *bufio.Reader) string {
 	str, _, err := reader.ReadLine()
 	if err == io.EOF {
 		return ""
@@ -31,7 +31,7 @@ func readLine(reader *bufio.Reader) string {
 	return strings.TrimRight(string(str), "\r\n")
 }
 
-func checkError(err error) {
+func CheckError(err error) {
 	if err != nil {
 		panic(err)
 	}

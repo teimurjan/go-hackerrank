@@ -5,13 +5,15 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"../utils"
 )
 
-func RunStaircase() {
+func runStaircase() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	sizeTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
-	checkError(err)
+	sizeTemp, err := strconv.ParseInt(utils.ReadLine(reader), 10, 64)
+	utils.CheckError(err)
 
 	size := int(sizeTemp)
 
@@ -21,5 +23,5 @@ func RunStaircase() {
 		result += strings.Repeat(" ", size-sharpsCount) + strings.Repeat("#", sharpsCount) + "\n"
 	}
 
-	printResult(result, true)
+	utils.PrintResult(result, true)
 }

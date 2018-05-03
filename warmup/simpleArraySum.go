@@ -6,6 +6,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"../utils"
 )
 
 func simpleArraySum(arr []int32) int32 {
@@ -16,23 +18,23 @@ func simpleArraySum(arr []int32) int32 {
 	return sum
 }
 
-func RunSimpleArraySum() {
+func runSimpleArraySum() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	arrLength, err := strconv.ParseInt(readLine(reader), 10, 64)
-	checkError(err)
+	arrLength, err := strconv.ParseInt(utils.ReadLine(reader), 10, 64)
+	utils.CheckError(err)
 
-	arrStr := strings.Split(readLine(reader), " ")
+	arrStr := strings.Split(utils.ReadLine(reader), " ")
 
 	var arr []int32
 
 	for i := 0; i < int(arrLength); i++ {
 		arrIntItem, err := strconv.ParseInt(arrStr[i], 10, 64)
-		checkError(err)
+		utils.CheckError(err)
 		arr = append(arr, int32(arrIntItem))
 	}
 
 	result := simpleArraySum(arr)
 
-	printResult(fmt.Sprintf("%d\n", result), true)
+	utils.PrintResult(fmt.Sprintf("%d\n", result), true)
 }

@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"../utils"
 )
 
-func RunTimeConversion() {
+func runTimeConversion() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	time := readLine(reader)
+	time := utils.ReadLine(reader)
 
 	var result string
 	if hoursTemp, isPM := time[:2], time[len(time)-2:] == "PM"; hoursTemp == "12" && !isPM {
@@ -24,7 +26,7 @@ func RunTimeConversion() {
 		}
 
 		hours, err := strconv.ParseInt(hoursStr, 10, 64)
-		checkError(err)
+		utils.CheckError(err)
 
 		newHours := hours + 12
 		result = fmt.Sprintf("%d%v\n", newHours, time[2:len(time)-2])
@@ -32,5 +34,5 @@ func RunTimeConversion() {
 		result = time[:len(time)-2] + "\n"
 	}
 
-	printResult(result, true)
+	utils.PrintResult(result, true)
 }

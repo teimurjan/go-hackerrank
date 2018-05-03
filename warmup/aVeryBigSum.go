@@ -6,14 +6,16 @@ import (
 	"math/big"
 	"os"
 	"strings"
+
+	"../utils"
 )
 
-func RunAVeryBigSum() {
+func runAVeryBigSum() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	readLine(reader)
+	utils.ReadLine(reader)
 
-	arrStr := strings.Split(readLine(reader), " ")
+	arrStr := strings.Split(utils.ReadLine(reader), " ")
 
 	var sum big.Int
 	for _, arrItem := range arrStr {
@@ -25,5 +27,5 @@ func RunAVeryBigSum() {
 		sum.Add(&sum, arrIntItem)
 	}
 
-	printResult(fmt.Sprintf("%v\n", sum.String()), true)
+	utils.PrintResult(fmt.Sprintf("%v\n", sum.String()), true)
 }

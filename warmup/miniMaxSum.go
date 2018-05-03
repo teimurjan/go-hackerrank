@@ -6,18 +6,20 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"../utils"
 )
 
-func RunMiniMaxSum() {
+func runMiniMaxSum() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	arrTemp := strings.Split(readLine(reader), " ")
+	arrTemp := strings.Split(utils.ReadLine(reader), " ")
 
 	var arr []int64
 	var sum int64
 	for _, arrTempItem := range arrTemp {
 		arrItem, err := strconv.ParseInt(arrTempItem, 10, 64)
-		checkError(err)
+		utils.CheckError(err)
 
 		arr = append(arr, arrItem)
 		sum += arrItem
@@ -35,5 +37,5 @@ func RunMiniMaxSum() {
 		}
 	}
 
-	printResult(fmt.Sprintf("%d %d\n", min, max), true)
+	utils.PrintResult(fmt.Sprintf("%d %d\n", min, max), true)
 }

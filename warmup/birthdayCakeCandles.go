@@ -6,20 +6,22 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"../utils"
 )
 
-func RunBirthdayCakeCandles() {
+func runBirthdayCakeCandles() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	readLine(reader)
+	utils.ReadLine(reader)
 
-	candleHeights := strings.Split(readLine(reader), " ")
+	candleHeights := strings.Split(utils.ReadLine(reader), " ")
 
 	var countOf = make(map[int]int)
 	var maxHeight int
 	for _, candleHeightStr := range candleHeights {
 		candleHeightTemp, err := strconv.ParseInt(candleHeightStr, 10, 64)
-		checkError(err)
+		utils.CheckError(err)
 		candleHeight := int(candleHeightTemp)
 
 		if currentCandleHeight := int(candleHeight); currentCandleHeight > maxHeight {
@@ -35,5 +37,5 @@ func RunBirthdayCakeCandles() {
 
 	candlesWillBeBlown := countOf[maxHeight]
 
-	printResult(fmt.Sprintf("%d\n", candlesWillBeBlown), true)
+	utils.PrintResult(fmt.Sprintf("%d\n", candlesWillBeBlown), true)
 }
