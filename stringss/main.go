@@ -12,6 +12,8 @@ func RunStringsSoultion(problemNane string) {
 		runStrongPassword()
 	case "caesarCipher":
 		runCaesarCipher()
+	case "marsExploration":
+		runMarsExploration()
 	default:
 		fmt.Println("Invalid program name.")
 	}
