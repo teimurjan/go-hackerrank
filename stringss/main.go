@@ -10,6 +10,8 @@ func RunStringsSoultion(problemNane string) {
 		runCamelCase()
 	case "strongPassword":
 		runStrongPassword()
+	case "caesarCipher":
+		runCaesarCipher()
 	default:
 		fmt.Println("Invalid program name.")
 	}
