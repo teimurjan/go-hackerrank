@@ -16,6 +16,8 @@ func RunStringsSoultion(problemNane string) {
 		runMarsExploration()
 	case "hackerRankInAString":
 		runHackerRankInAString()
+	case "pangrams":
+		runPangrams()
 	default:
 		fmt.Println("Invalid program name.")
 	}

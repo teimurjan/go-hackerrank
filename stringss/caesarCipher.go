@@ -11,12 +11,16 @@ import (
 	"../utils"
 )
 
+const alphabetLength float64 = 26
+
 func getNewLetter(letter rune, rotation int) rune {
 	const startLower, startUpper int = int('a'), int('A')
 	if unicode.IsUpper(letter) {
-		return rune(startUpper + int(math.Mod(float64(int(letter)-startUpper+rotation), 26)))
+		newIndex := int(letter) - startUpper + rotation
+		return rune(startUpper + int(math.Mod(float64(newIndex), alphabetLength)))
 	} else {
-		return rune(startLower + int(math.Mod(float64(int(letter)-startLower+rotation), 26)))
+		newIndex := int(letter) - startLower + rotation
+		return rune(startLower + int(math.Mod(float64(newIndex), alphabetLength)))
 	}
 }
 
@@ -32,7 +36,7 @@ func runCaesarCipher() {
 	utils.CheckError(err)
 
 	var encryptedStr string
-	rotation := int(math.Mod(float64(rotationTemp), 26))
+	rotation := int(math.Mod(float64(rotationTemp), alphabetLength))
 	for _, char := range word {
 		if unicode.IsLetter(char) {
 			encryptedStr += string(getNewLetter(char, rotation))
