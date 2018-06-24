@@ -20,6 +20,8 @@ func RunWarmupSoultion(problemNane string) {
 		runStaircase()
 	case "timeConversion":
 		runTimeConversion()
+	case "compareTheTriplets":
+		runCompareTheTriplets()
 	default:
 		fmt.Println("Invalid program name.")
 	}
