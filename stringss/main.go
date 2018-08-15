@@ -18,6 +18,8 @@ func RunStringsSoultion(problemNane string) {
 		runHackerRankInAString()
 	case "pangrams":
 		runPangrams()
+	case "weightedUniformStrings":
+		runWeightedUniformStrings()
 	default:
 		fmt.Println("Invalid program name.")
 	}
