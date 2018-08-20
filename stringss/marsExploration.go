@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 const originalMsg string = "SOS"

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 func parseTripletStr(tripletStr string) [3]int {

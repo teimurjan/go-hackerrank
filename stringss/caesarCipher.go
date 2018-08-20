@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"unicode"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 const alphabetLength float64 = 26

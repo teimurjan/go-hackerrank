@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 const wordToFind string = "hackerrank"

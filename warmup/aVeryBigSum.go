@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 func runAVeryBigSum() {

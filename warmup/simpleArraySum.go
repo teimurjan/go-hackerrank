@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 func simpleArraySum(arr []int32) int32 {

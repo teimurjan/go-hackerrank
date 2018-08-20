@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 const alphabetStartIndex int = 97

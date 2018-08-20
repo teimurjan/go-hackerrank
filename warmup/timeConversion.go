@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 func runTimeConversion() {

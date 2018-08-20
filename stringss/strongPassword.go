@@ -6,7 +6,7 @@ import (
 	"os"
 	"unicode"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 func isSpecialChar(char rune) bool {

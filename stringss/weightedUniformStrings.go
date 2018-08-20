@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"unicode"
 
-	"../utils"
+	"github.com/teimurjan/go-hackerrank/utils"
 )
 
 func getWeights(str *string) map[int]bool {
