@@ -4,13 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"./stringss"
-	"./warmup"
+	"github.com/teimurjan/go-hackerrank/interview"
+	"github.com/teimurjan/go-hackerrank/stringss"
+	"github.com/teimurjan/go-hackerrank/warmup"
 )
-
-func Ho() {
-
-}
 
 func main() {
 	args := os.Args[1:]
@@ -18,9 +15,11 @@ func main() {
 	if len(args) == 2 {
 		switch args[0] {
 		case "warmup":
-			warmup.RunWarmupSoultion(args[1])
+			warmup.RunSolution(args[1])
 		case "strings":
-			stringss.RunStringsSoultion(args[1])
+			stringss.RunSolution(args[1])
+		case "interview":
+			interview.RunSolution(args[1])
 		default:
 			fmt.Println("Invalid section name.")
 		}

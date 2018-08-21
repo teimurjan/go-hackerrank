@@ -2,7 +2,8 @@ package warmup
 
 import "fmt"
 
-func RunWarmupSoultion(problemNane string) {
+// RunSolution runs the solution for a problem from warmup section
+func RunSolution(problemNane string) {
 	switch problemNane {
 	case "aVeryBigSum":
 		runAVeryBigSum()

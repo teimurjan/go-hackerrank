@@ -2,7 +2,8 @@ package stringss
 
 import "fmt"
 
-func RunStringsSoultion(problemNane string) {
+// RunSolution runs the solution for a problem from strings section
+func RunSolution(problemNane string) {
 	switch problemNane {
 	case "superReducedString":
 		runSuperReducedString()
