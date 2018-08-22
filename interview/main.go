@@ -7,6 +7,8 @@ func RunSolution(problemNane string) {
 	switch problemNane {
 	case "2dArrayDS":
 		run2dArrayDS()
+	case "leftRotation":
+		runLeftRotation()
 	default:
 		fmt.Println("Invalid program name.")
 	}
